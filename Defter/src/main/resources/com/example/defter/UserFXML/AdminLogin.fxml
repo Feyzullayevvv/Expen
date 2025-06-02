@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="422.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.defter.Admin.LoginController">
+   <children>
+      <Pane layoutX="321.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="426.0" prefWidth="359.0" style="-fx-background-color: #0387f6;">
+         <children>
+            <TextField fx:id="userName" layoutX="66.0" layoutY="101.0" prefHeight="26.0" prefWidth="216.0" promptText="Istifadəçi adı" stylesheets="@../Css/styles.css" />
+            <PasswordField fx:id="passwordField" layoutX="66.0" layoutY="170.0" prefHeight="32.0" prefWidth="216.0" promptText="Parol" stylesheets="@../Css/styles.css" />
+            <Button layoutX="261.0" layoutY="257.0" mnemonicParsing="false" onAction="#signIn" stylesheets="@../Css/button.css" text="Daxil Ol" />
+         </children>
+      </Pane>
+      <Pane layoutX="-5.0" layoutY="-2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="428.0" prefWidth="321.0" style="-fx-background-color: #f7f4f4;">
+         <children>
+            <ImageView fitHeight="111.0" fitWidth="244.0" layoutX="35.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/logo.jpeg" />
+               </image>
+            </ImageView>
+         </children></Pane>
+   </children>
+</AnchorPane>

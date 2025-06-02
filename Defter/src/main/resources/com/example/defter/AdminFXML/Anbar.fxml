@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anbarPane" prefHeight="836.0" prefWidth="1528.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.defter.Admin.AnbarController">
+   <children>
+      <TableView fx:id="anbarTableView" layoutX="57.0" layoutY="160.0" onMouseClicked="#handleClick" prefHeight="632.0" prefWidth="1428.0" AnchorPane.topAnchor="160.0">
+        <columns>
+          <TableColumn fx:id="malId" prefWidth="117.10017013549805" text="Mal Id" />
+          <TableColumn fx:id="barcode" prefWidth="254.09031677246094" text="barcode" />
+            <TableColumn fx:id="malKod" prefWidth="281.41265869140625" text="Kod" />
+            <TableColumn fx:id="mal" prefWidth="321.58734130859375" text="Mal" />
+            <TableColumn fx:id="miqdar" prefWidth="217.997802734375" text="Miqdar" />
+            <TableColumn fx:id="mebleg" prefWidth="236.8214111328125" text="Mebleg" />
+        </columns>
+      </TableView>
+      <TextField fx:id="malKoduSearchBar" layoutX="479.0" layoutY="116.0" onKeyReleased="#handleKeyReleased" prefHeight="26.0" prefWidth="118.0" promptText="Mal Kodu" />
+      <TextField fx:id="malBarcoduSearchBar" layoutX="227.0" layoutY="111.0" onKeyReleased="#handleKeyReleased" prefHeight="26.0" prefWidth="170.0" promptText="Barcode" />
+      <TextField fx:id="malAdiSearchBar" layoutX="762.0" layoutY="106.0" onKeyReleased="#handleKeyReleased" prefHeight="26.0" prefWidth="191.0" promptText="Mal Adı" />
+      <Button fx:id="yeniButton" layoutX="1363.0" layoutY="26.0" mnemonicParsing="false" onAction="#createInsertAnbar" prefHeight="34.0" prefWidth="144.0" stylesheets="@../Css/button.css" text="Əlavə Et" />
+      <ProgressBar fx:id="progressbar" layoutX="542.0" layoutY="30.0" prefHeight="21.0" prefWidth="288.0" progress="0.0" />
+      <Button layoutX="69.0" layoutY="18.0" mnemonicParsing="false" onAction="#handlePrintButtonAction" text="Print" />
+   </children>
+</AnchorPane>

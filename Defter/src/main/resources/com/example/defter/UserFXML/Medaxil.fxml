@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="medaxilPane" prefHeight="506.0" prefWidth="1142.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.defter.Admin.MedaxilController">
+   <children>
+      <TableView fx:id="medaxilTableView" layoutX="39.0" layoutY="127.0" onKeyPressed="#handleKeyPressed" onMouseClicked="#handleClick" prefHeight="373.0" prefWidth="1095.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="tarix" prefWidth="456.7346725463867" text="Tarix" />
+            <TableColumn fx:id="kreditor" prefWidth="565.3017578125" text="Kreditor" />
+            <TableColumn fx:id="mebleg" prefWidth="335.1983642578125" text="Məbləğ" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="startDatePicker" layoutX="10.0" layoutY="21.0" prefHeight="26.0" prefWidth="226.0" promptText="Başlanğıc Tarix" />
+      <DatePicker fx:id="endDatePicker" layoutX="8.0" layoutY="61.0" prefHeight="29.0" prefWidth="232.0" promptText="Son Tarix" />
+      <TextField fx:id="searchBar" layoutX="612.0" layoutY="77.0" onKeyReleased="#handleKeyReleased" prefHeight="34.0" prefWidth="375.0" promptText="Kreditor adı" />
+      <Button fx:id="yeniButton" layoutX="916.0" layoutY="18.0" mnemonicParsing="false" onAction="#createNewMedaxil" prefHeight="30.0" prefWidth="202.0" stylesheets="@../Css/button.css" text="Yeni" />
+      <ToggleButton fx:id="toggleButton" layoutX="282.0" layoutY="14.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="131.0" stylesheets="@../Css/button.css" text="Bu gün" />
+      <ProgressBar fx:id="progressbar" layoutX="481.0" layoutY="16.0" prefHeight="22.0" prefWidth="284.0" progress="0.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="userPane" prefHeight="836.0" prefWidth="1528.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.defter.Admin.UserListController">
+   <children>
+      <TableView fx:id="userTableView" layoutX="31.0" layoutY="111.0" onMouseClicked="#handleClick" prefHeight="676.0" prefWidth="1456.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="299.12550354003906" text="id" />
+          <TableColumn fx:id="user" prefWidth="726.3744735717773" text="User" />
+            <TableColumn fx:id="password" prefWidth="429.55853271484375" text="Password" />
+        </columns>
+      </TableView>
+      <Button fx:id="yeniButton" layoutX="1211.0" layoutY="17.0" mnemonicParsing="false" onAction="#createNewUser" prefHeight="29.0" prefWidth="239.0" stylesheets="@../Css/button.css" text="Yeni" />
+      <ProgressBar fx:id="progressbar" layoutX="398.0" layoutY="21.0" prefHeight="33.0" prefWidth="452.0" progress="0.0" />
+   </children>
+</AnchorPane>

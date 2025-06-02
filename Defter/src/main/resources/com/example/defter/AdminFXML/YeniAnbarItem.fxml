@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="yeniAnbarPane" prefHeight="836.0" prefWidth="1528.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.defter.Admin.YeniAnbarItemController">
+   <children>
+      <GridPane layoutX="28.0" layoutY="104.0" prefHeight="399.0" prefWidth="505.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="53.0" prefWidth="151.0" text="Mal">
+               <font>
+                  <Font name="American Typewriter" size="43.0" />
+               </font>
+            </Label>
+            <Label prefHeight="51.0" prefWidth="196.0" text="Miqdar" GridPane.rowIndex="1">
+               <font>
+                  <Font name="American Typewriter" size="43.0" />
+               </font>
+            </Label>
+            <Label prefHeight="39.0" prefWidth="149.0" text="Məbləğ" GridPane.rowIndex="2">
+               <font>
+                  <Font name="American Typewriter" size="43.0" />
+               </font>
+            </Label>
+            <Button fx:id="silButton" mnemonicParsing="false" onAction="#handleDelete" prefHeight="27.0" prefWidth="76.0" stylesheets="@../Css/button.css" text="Sil" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="38.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="elaveEtButton" mnemonicParsing="false" onAction="#elaveEt" stylesheets="@../Css/button.css" text="Əlavə Et" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Button>
+            <TextField fx:id="malTextField" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="miqdarTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="meblegTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#createMalSiyahiView" stylesheets="@../Css/button.css" text="..." GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="220.0" top="30.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+      <Button layoutX="66.0" layoutY="772.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="38.0" prefWidth="225.0" stylesheets="@../Css/button.css" text="Ləğv Et" />
+      <Button fx:id="bitirButton" layoutX="1245.0" layoutY="775.0" mnemonicParsing="false" onAction="#handleBitti" prefHeight="35.0" prefWidth="244.0" stylesheets="@../Css/button.css" text="Bitir" />
+      <TableView fx:id="anbarTableView" layoutX="614.0" layoutY="56.0" prefHeight="564.0" prefWidth="904.0">
+         <columns>
+            <TableColumn fx:id="malId" prefWidth="51.4847412109375" text="Mal Id" />
+            <TableColumn fx:id="barcode" prefWidth="134.44244384765625" text="barcode" />
+            <TableColumn fx:id="malKod" prefWidth="159.0576171875" text="Kod" />
+            <TableColumn fx:id="mal" prefWidth="230.96502685546875" text="Mal" />
+            <TableColumn fx:id="miqdar" prefWidth="146.0350341796875" text="Miqdar" />
+            <TableColumn fx:id="mebleg" prefWidth="181.555419921875" text="Mebleg" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

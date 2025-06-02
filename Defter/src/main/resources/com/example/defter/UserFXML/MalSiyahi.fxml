@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="malSiyahiPane" prefHeight="506.0" prefWidth="1142.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.defter.Admin.MalSiyahiController">
+   <children>
+      <TableView fx:id="malTableView" layoutX="11.0" layoutY="89.0" onMouseClicked="#handleClick" prefHeight="403.0" prefWidth="1128.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="barcode" prefWidth="144.51224517822266" text="Barcode" />
+            <TableColumn fx:id="kod" prefWidth="185.98162841796875" text="Kod" />
+            <TableColumn fx:id="malAdi" prefWidth="220.7281494140625" text="Mal adı" />
+            <TableColumn fx:id="maya" prefWidth="141.2718505859375" text="Maya" />
+            <TableColumn fx:id="satish1" prefWidth="187.46234130859375" text="Satış 1" />
+            <TableColumn fx:id="satish2" prefWidth="176.53765869140625" text="Satış 2" />
+        </columns>
+      </TableView>
+      <Button fx:id="yeniButton" layoutX="923.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleYeniMal" prefHeight="35.0" prefWidth="184.0" stylesheets="@../Css/button.css" text="Yeni" />
+      <TextField fx:id="malAdiSearchBar" layoutX="428.0" layoutY="48.0" onKeyReleased="#handleKeyReleased" prefHeight="26.0" prefWidth="144.0" promptText="Mal Adı" />
+      <TextField fx:id="malKoduSearchBar" layoutX="255.0" layoutY="49.0" onKeyReleased="#handleKeyReleased" prefHeight="25.0" prefWidth="113.0" promptText="Mal Kodu" />
+      <TextField fx:id="malBarcoduSearchBar" layoutX="89.0" layoutY="48.0" onKeyReleased="#handleKeyReleased" prefHeight="25.0" prefWidth="130.0" promptText="Barcode" />
+      <ProgressBar fx:id="progressbar" layoutX="372.0" layoutY="7.0" prefHeight="20.0" prefWidth="337.0" />
+   </children>
+</AnchorPane>

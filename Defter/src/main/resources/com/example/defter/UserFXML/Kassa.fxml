@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="kassaPane" prefHeight="506.0" prefWidth="1142.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.defter.Admin.KassaController">
+   <children>
+      <TableView fx:id="kassaTableVIew" layoutX="28.0" layoutY="132.0" prefHeight="346.0" prefWidth="1103.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="tarix" prefWidth="277.56204986572266" text="Tarix" />
+            <TableColumn fx:id="nov" prefWidth="310.9380187988281" text="Növ" />
+            <TableColumn fx:id="qeyd" prefWidth="437.681396484375" text="Qeyd" />
+            <TableColumn fx:id="mebleg" prefWidth="372.318603515625" text="Məbləğ" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="startDatePicker" layoutX="31.0" layoutY="11.0" prefHeight="26.0" prefWidth="225.0" promptText="Başlanğıc Tarix" />
+      <DatePicker fx:id="endDatePicker" layoutX="291.0" layoutY="11.0" prefHeight="19.0" prefWidth="225.0" promptText="Son Tarix" />
+      <TextField fx:id="searchBar" layoutX="743.0" layoutY="100.0" onKeyReleased="#handleKeyReleased" prefHeight="29.0" prefWidth="283.0" promptText="Qeydə görə axtar" />
+      <ChoiceBox fx:id="choiceBox" layoutX="25.0" layoutY="65.0" prefHeight="17.0" prefWidth="144.0" />
+      <Button fx:id="yeniButton" layoutX="955.0" layoutY="21.0" mnemonicParsing="false" onAction="#createNewKassa" prefHeight="30.0" prefWidth="143.0" stylesheets="@../Css/button.css" text="Yeni" />
+      <TextField fx:id="total" editable="false" layoutX="631.0" layoutY="21.0" prefHeight="28.0" prefWidth="203.0" />
+      <ProgressBar fx:id="progressbar" layoutX="449.0" layoutY="90.0" prefWidth="200.0" progress="0.0" />
+   </children>
+</AnchorPane>

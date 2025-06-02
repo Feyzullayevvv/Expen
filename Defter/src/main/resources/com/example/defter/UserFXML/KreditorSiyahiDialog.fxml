@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="453.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.defter.Admin.KreditorSechimiDialog">
+   <children>
+      <TableView fx:id="kreditorTableView" layoutX="25.0" layoutY="66.0" prefHeight="350.0" prefWidth="694.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="80.1890697479248" text="Id" />
+            <TableColumn fx:id="ad" prefWidth="352.9245910644531" text="Kreditor" />
+            <TableColumn fx:id="borc" prefWidth="259.575439453125" text="Borc" />
+         </columns>
+      </TableView>
+      <TextField fx:id="searchBar" layoutX="135.0" layoutY="29.0" onKeyReleased="#handleKeyReleased" prefHeight="26.0" prefWidth="272.0" promptText="Kreditor adı" />
+   </children>
+</AnchorPane>

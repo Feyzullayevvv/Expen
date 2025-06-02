@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mexaricPane" prefHeight="836.0" prefWidth="1528.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.defter.Admin.MexaricController">
+   <children>
+      <TableView fx:id="mexaricTableView" layoutX="28.0" layoutY="134.0" onKeyPressed="#handleKeyPressed" onMouseClicked="#handleClick" prefHeight="666.0" prefWidth="1457.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="87.0" text="Id" />
+          <TableColumn fx:id="tarix" prefWidth="411.16527557373047" text="Tarix" />
+            <TableColumn fx:id="debitor" prefWidth="526.8347473144531" text="Debitor" />
+            <TableColumn fx:id="mebleg" prefWidth="431.090087890625" text="Məbləğ" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="startDatePicker" layoutX="45.0" layoutY="14.0" prefHeight="30.0" prefWidth="235.0" promptText="Başlanğıc Tarix" />
+      <DatePicker fx:id="endDatePicker" layoutX="46.0" layoutY="79.0" prefHeight="30.0" prefWidth="234.0" promptText="Son Tarix" />
+      <ToggleButton fx:id="toggleButton" layoutX="329.0" layoutY="12.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="172.0" stylesheets="@../Css/button.css" text="Bu gün" />
+      <TextField fx:id="searchBar" layoutX="568.0" layoutY="77.0" onKeyReleased="#handleKeyReleased" prefHeight="31.0" prefWidth="362.0" promptText="Debitor adı" />
+      <Button fx:id="yeniButton" layoutX="1274.0" layoutY="21.0" mnemonicParsing="false" onAction="#createNewMexaric" prefHeight="38.0" prefWidth="186.0" stylesheets="@../Css/button.css" text="Yeni" />
+      <ProgressBar fx:id="progressbar" layoutX="665.0" layoutY="14.0" prefHeight="24.0" prefWidth="268.0" progress="0.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="kreditorPane" prefHeight="836.0" prefWidth="1528.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.defter.Admin.KreditorController">
+   <children>
+      <TableView fx:id="kreditorTableView" layoutX="59.0" layoutY="137.0" onMouseClicked="#handleClick" prefHeight="664.0" prefWidth="1412.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="142.5" text="Id" />
+          <TableColumn fx:id="ad" prefWidth="806.3443603515625" text="Kreditor" />
+            <TableColumn fx:id="borc" prefWidth="462.15557861328125" text="Borc" />
+        </columns>
+      </TableView>
+      <Button fx:id="yeniButton" layoutX="1260.0" layoutY="25.0" mnemonicParsing="false" onAction="#createNewKreditor" prefHeight="33.0" prefWidth="227.0" stylesheets="@../Css/button.css" text="Yeni" />
+      <TextField fx:id="searchBar" layoutX="229.0" layoutY="80.0" onKeyReleased="#handleKeyReleased" prefHeight="31.0" prefWidth="435.0" promptText="Kreditor adı" />
+      <ProgressBar fx:id="progressbar" layoutX="614.0" layoutY="13.0" prefHeight="23.0" prefWidth="246.0" progress="0.0" />
+   </children>
+</AnchorPane>

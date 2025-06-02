@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="867.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.defter.Admin.MalSechimiDialog">
+   <children>
+      <TableView fx:id="malTableView" layoutX="10.0" layoutY="52.0"  prefHeight="308.0" prefWidth="843.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="45.7250862121582" text="Id" />
+            <TableColumn fx:id="barcode" prefWidth="99.80740356445312" text="Barcode" />
+            <TableColumn fx:id="kod" prefWidth="105.99468994140625" text="Kod" />
+            <TableColumn fx:id="malAdi" prefWidth="240.00534057617188" text="Mal adı" />
+            <TableColumn fx:id="maya" prefWidth="135.51443481445312" text="Maya" />
+            <TableColumn fx:id="satish1" prefWidth="110.99285888671875" text="Satış 1" />
+            <TableColumn fx:id="satish2" prefWidth="104.007080078125" text="Satış 2" />
+         </columns>
+      </TableView>
+      <TextField fx:id="malAdiSearchBar" layoutX="271.0" layoutY="16.0" onKeyReleased="#handleKeyReleased" prefHeight="26.0" prefWidth="201.0" promptText="Mal Adı" />
+      <TextField fx:id="malKoduSearchBar" layoutX="161.0" layoutY="16.0" onKeyReleased="#handleKeyReleased" prefHeight="26.0" prefWidth="85.0" promptText="Mal Kodu" />
+      <TextField fx:id="malBarcoduSearchBar" layoutX="63.0" layoutY="16.0" onKeyReleased="#handleKeyReleased" prefHeight="26.0" prefWidth="85.0" promptText="Barcode" />
+   </children>
+</AnchorPane>
